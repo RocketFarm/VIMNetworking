@@ -53,10 +53,10 @@ NSString *const DefaultAPIVersionString = @"3.2";
     NSParameterAssert(self.scope);
     NSParameterAssert(self.baseURLString);
     NSParameterAssert(self.APIVersionString);
-    NSParameterAssert(self.keychainAccessGroup);
+//    NSParameterAssert(self.keychainAccessGroup);
     NSParameterAssert(self.keychainService);
     
-    return self.clientKey && self.clientSecret && self.scope && self.baseURLString && self.APIVersionString && self.keychainAccessGroup && self.keychainService;
+    return self.clientKey && self.clientSecret && self.scope && self.baseURLString && self.APIVersionString /*&& self.keychainAccessGroup*/ && self.keychainService;
 }
 
 @end

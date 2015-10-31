@@ -151,11 +151,11 @@ static VIMSession *_sharedSession;
 
 - (NSString *)bearerAuthorizationHeaderValue
 {
-    if (self.account.accessToken && [[self.account.tokenType lowercaseString] isEqualToString:@"bearer"])
+	if (self.account.accessToken && [[self.account.tokenType lowercaseString] isEqualToString:@"bearer"])
     {
         return [NSString stringWithFormat:@"Bearer %@", self.account.accessToken];
     }
-    
+
     return nil;
 }
 
@@ -253,8 +253,8 @@ static VIMSession *_sharedSession;
     {
         if (completionBlock)
         {
-            NSError *error = [NSError errorWithDomain:kVimeoAuthenticatorErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : @"VIMAccountStore key cannot be nil"}];
-            completionBlock(error);
+            NSError *error2 = [NSError errorWithDomain:kVimeoAuthenticatorErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : @"VIMAccountStore key cannot be nil"}];
+            completionBlock(error2);
         }
 
         return;
@@ -501,8 +501,8 @@ static VIMSession *_sharedSession;
         {
             if (completionBlock)
             {
-                NSError *error = [NSError errorWithDomain:kVimeoAuthenticatorErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : @"Unable to refresh user, no account or account is not authenticated."}];
-                completionBlock(error);
+                NSError *error2 = [NSError errorWithDomain:kVimeoAuthenticatorErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : @"Unable to refresh user, no account or account is not authenticated."}];
+                completionBlock(error2);
             }
             
             return;

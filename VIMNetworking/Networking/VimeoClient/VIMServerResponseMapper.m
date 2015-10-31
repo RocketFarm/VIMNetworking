@@ -92,7 +92,7 @@ static NSString *const VIMServerResponseMapperErrorDomain = @"VIMServerResponseM
         NSArray *components = [operation.descriptor.modelKeyPath componentsSeparatedByString:@"."];
         if(components)
         {
-            for(int i=0;i<components.count-1;i++)
+            for(unsigned int i=0;i<components.count-1;i++)
                 parentKeyPath = [parentKeyPath stringByAppendingString:[components objectAtIndex:i]];
         }
         

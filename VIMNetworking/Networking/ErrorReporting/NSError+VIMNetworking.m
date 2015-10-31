@@ -171,7 +171,7 @@ NSString * const VimeoUserMessageKey = @"error";
     {
         result = @"";
         
-        for (int i = 0; i < [errorCodes count]; i++)
+        for (unsigned int i = 0; i < [errorCodes count]; i++)
         {
             NSNumber *code = errorCodes[i];
 
